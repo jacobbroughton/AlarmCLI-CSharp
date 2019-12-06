@@ -14,7 +14,7 @@ namespace AlarmCLI
             Console.ReadLine();
         }
 
-        private static void GiveTime(Object source, System.Timers.ElapsedEventArgs e)
+        private static void GiveTime(object source, System.Timers.ElapsedEventArgs e)
         {
             DateTime DateTimeNow = DateTime.Now;
             Console.Clear();
