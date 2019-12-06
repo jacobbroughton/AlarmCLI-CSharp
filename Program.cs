@@ -18,7 +18,7 @@ namespace AlarmCLI
         {
             DateTime DateTimeNow = DateTime.Now;
             Console.Clear();
-            Console.WriteLine(DateTimeNow.ToString("h:mm:ss tt"));
-        }
+            Console.WriteLine("The time is: " + DateTimeNow.ToString("h:mm:ss tt"));
+        } 
     }
 }
