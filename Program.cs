@@ -4,9 +4,21 @@ namespace AlarmCLI
 {
     class Program
     {
-        static void Main(string[] args)
+
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+            System.Timers.Timer secTimer = new System.Timers.Timer();
+            secTimer.Interval = 1000;
+            secTimer.Elapsed += GiveTime;
+            secTimer.Enabled = true;
+            Console.ReadLine();
+        }
+
+        private static void GiveTime(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            DateTime DateTimeNow = DateTime.Now;
+            Console.Clear();
+            Console.WriteLine(DateTimeNow.ToString("h:mm:ss tt"));
         }
     }
 }
